@@ -52,7 +52,9 @@
 
 // maxDepth([3, 9, 20, null, null, 15, 7]);
 
-if (!root) return 0;
-var lval = maxDepth(root.left) + 1;
-var rval = maxDepth(root.right) + 1;
-return lval > rval ? lval : rval;
+var maxDepth = function(root) {
+  if (!root) return 0;
+  var lval = maxDepth(root.left) + 1;
+  var rval = maxDepth(root.right) + 1;
+  return lval > rval ? lval : rval;
+};
